@@ -1,0 +1,21 @@
+@import 'compass/css3'
+
+
+@mixin clear()
+    &:after
+        clear: both
+
+    &:before, &:after
+        display: table
+        content: " "
+
+
+=keyframes($name)
+    @-webkit-keyframes #{$name}
+        @content
+    @-moz-keyframes #{$name}
+        @content
+    @-ms-keyframes #{$name}
+        @content
+    @keyframes #{$name}
+        @content

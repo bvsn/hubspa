@@ -1,0 +1,5 @@
+.lein-env
+.sass-cache
+
+target
+resources/public
