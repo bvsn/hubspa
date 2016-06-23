@@ -1,20 +1,27 @@
 (ns cljs.site.routing
-  (:use [cljs.site.components.about :only [about]])
-
   (:require [secretary.core :as secretary :refer-macros [defroute]]
-            [om.core :as om]
 
-            [cljs.lib.dom :as dom]))
+            [cljs.lib.event :as event]
+            [cljs.site.component :as component]))
 
 
 (secretary/set-config! :prefix "#!")
 
 
-(defonce about-state (atom {}))
-
-
 (defroute "/" []
-  (om/root about about-state {:target (dom/sel1 "#js-container")}))
+  (component/menu)
+  (component/about))
+
+(defroute "/cv" []
+  (component/menu)
+  (component/cv))
+
+(defroute "/apps" []
+  (component/menu)
+  (component/apps))
 
 
 (secretary/dispatch! (.-hash js/location))
+
+(event/on-hashchange (fn [url]
+  (secretary/dispatch! url)))

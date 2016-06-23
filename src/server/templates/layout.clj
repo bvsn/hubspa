@@ -2,9 +2,11 @@
   (:use [hiccup.core :only [html]]
         [hiccup.page :only [html5]]
 
-        [settings         :only [public-path]]
+        [settings           :only [public-path]]
         [server.lib.util.io :only [last-modified-date]])
+
   (:require [hiccup.page :as page]
+
             [clojure.tools.macro :as macro]))
 
 
@@ -47,5 +49,5 @@
 (defmacro defsite
   [template]
   `(defpage :site (html
-    [:div.b-wrapper.h-clear
-      ~template])))
+    [:div#js-header.b-header]
+    [:div.b-wrapper.h-clear ~template])))

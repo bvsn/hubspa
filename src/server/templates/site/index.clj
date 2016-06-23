@@ -2,4 +2,4 @@
 
 
 (def template
-  [:div#js-container.b-container.b-container_type_site])
+  [:div#js-body.b-container.b-container_type_site])

@@ -49,7 +49,7 @@
                 :source-paths ["src/cljs"]
 
                 :compiler {:output-to "resources/public/js/site.js"
-                           :output-dir "resources/public/js/compiled"
+                           :output-dir "resources/public/js"
                            :optimizations :whitespace
                            :source-map-timestamp true}}
 
