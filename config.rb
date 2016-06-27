@@ -5,7 +5,7 @@ Encoding.default_external = "utf-8"
 # Set this to the root of your project when deployed:
 http_path = "/"
 fonts_dir = "/resources/public/fonts"
-http_fonts_path = "/fonts"
+http_fonts_path = "/public/fonts"
 css_dir = "resources/public/css"
 sass_dir = "resources/sass/public"
 add_import_path "resources/sass"

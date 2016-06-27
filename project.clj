@@ -25,7 +25,10 @@
             [lein-environ "1.0.3"]
             [lein-cljsbuild "1.1.3"]]
 
-  :clean-targets ^{:protect false} ["resources/public/js"]
+  :clean-targets ^{:protect false} [
+    "resources/public/js"
+    "resources/public/css"
+  ]
 
   :ring {:handler hubspa/app}
 

@@ -10,9 +10,9 @@
             [clojure.tools.macro :as macro]))
 
 
-(def js {:site ["/js/site.js"]})
+(def js {:site ["/public/js/site.js"]})
 
-(def css {:site ["/css/site.css"]})
+(def css {:site ["/public/css/site.css"]})
 
 
 (defn make-revision

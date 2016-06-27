@@ -8,6 +8,6 @@
 (defroutes routes
   (context "/" [] site/routes)
 
-  (resources "/")
+  (resources "/public")
 
   (not-found not-found-page))
