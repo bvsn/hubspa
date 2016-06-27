@@ -16,3 +16,12 @@
 
 (defn apps []
   (om/root view/apps (atom {}) {:target (dom/sel1 "#js-body")}))
+
+
+(defn componify [components]
+  (doseq [component components]
+    (component)))
+
+(defn with-site [& components]
+  (menu)
+  (componify components))

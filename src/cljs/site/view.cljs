@@ -20,7 +20,7 @@
 
 (defn about [app owner]
   (om/component
-    (html [:p "hello"])))
+    (html [:p "Hello, I'm Andrew Bovsunovskiy."])))
 
 (defn apps [app owner]
   (om/component

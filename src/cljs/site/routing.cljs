@@ -9,16 +9,13 @@
 
 
 (defroute "/" []
-  (component/menu)
-  (component/about))
+  (component/with-site component/about))
 
 (defroute "/cv" []
-  (component/menu)
-  (component/cv))
+  (component/with-site component/cv))
 
 (defroute "/apps" []
-  (component/menu)
-  (component/apps))
+  (component/with-site component/apps))
 
 
 (secretary/dispatch! (.-hash js/location))
