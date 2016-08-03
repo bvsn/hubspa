@@ -2,20 +2,20 @@
   (:require [secretary.core :as secretary :refer-macros [defroute]]
 
             [cljs.lib.event :as event]
-            [cljs.site.component :as component]))
+            [cljs.site.core :as core]))
 
 
 (secretary/set-config! :prefix "#!")
 
 
 (defroute "/" []
-  (component/with-site component/about))
+  (core/with-site core/about))
 
 (defroute "/cv" []
-  (component/with-site component/cv))
+  (core/with-site core/cv))
 
 (defroute "/apps" []
-  (component/with-site component/apps))
+  (core/with-site core/apps))
 
 
 (secretary/dispatch! (.-hash js/location))

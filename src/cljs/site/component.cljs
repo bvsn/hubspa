@@ -1,27 +1,28 @@
-(ns cljs.site.component
-  (:require [om.core :as om]
-
-            [cljs.lib.dom :as dom]
-            [cljs.site.view :as view]))
+(ns cljs.site.component)
 
 
 (defn menu []
-  (om/root view/menu (atom {}) {:target (dom/sel1 "#js-header")}))
+  [:div.b-container
+    [:div.col-xs-12.b-header__contacts.b-wrapper
+      [:ul.h-f-r
+        [:li
+          [:a.hb-header__link.b-header__link_color_grey {:href "mailto:an.bvsn@gmail.com"}
+            "an.bvsn@gmail.com"]]]]
+    [:hr]
+
+    [:div.col-xs-12.b-header__menu
+      [:ul.b-menu.col-center
+        [:li.b-menu__item
+          [:a.b-menu__link {:href "#!/"} "About"]]
+
+        [:li.b-menu__item.h-ml-20
+          [:a.b-menu__link {:href "#!/cv"} "CV"]]
+
+        [:li.b-menu__item.h-ml-20
+          [:a.b-menu__link {:href "#!/apps"} "Apps"]]]]])
 
 (defn about []
-  (om/root view/about (atom {}) {:target (dom/sel1 "#js-body")}))
+  [:p "Hello, I'm Andrew Bovsunovskiy."])
 
 (defn cv []
-  (om/root view/cv (atom {}) {:target (dom/sel1 "#js-body")}))
-
-(defn apps []
-  (om/root view/apps (atom {}) {:target (dom/sel1 "#js-body")}))
-
-
-(defn componify [components]
-  (doseq [component components]
-    (component)))
-
-(defn with-site [& components]
-  (menu)
-  (componify components))
+  [:p "cv"])

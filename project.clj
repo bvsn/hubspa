@@ -8,10 +8,8 @@
                  [org.clojure/core.async "0.2.385"]
                  [org.clojure/clojurescript "1.9.89"]
 
-                 [org.omcljs/om "0.9.0"]
+                 [reagent "0.6.0-rc"]
 
-
-                 [sablono "0.3.6"]
                  [secretary "1.2.3"]
 
                  [lein-cljsbuild "1.1.3"]
