@@ -40,6 +40,7 @@
         [:meta {:http-equiv "X-UA-Compatible" :content "IE=edge,chrome=1"}]
 
         [:link {:href "/public/favicon.ico" :rel "shortcut icon" :type "image/x-icon"}]
+        [:link {:rel "stylesheet" :type "text/css" :href "//fonts.googleapis.com/css?family=Lato:400,700"}]
 
         (map include-css (~kind css))]
       [:body
@@ -50,4 +51,4 @@
   [template]
   `(defpage :site (html
     [:div#js-header.b-header]
-    [:div.b-wrapper.h-clear ~template])))
+    [:div.b-wrapper ~template])))
