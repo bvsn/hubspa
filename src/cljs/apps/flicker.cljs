@@ -3,6 +3,8 @@
 
   (:require [cljs.core.async :refer [chan]]
 
+            [cljs.apps.reagent :as rlib]
+
             [reagent.core :as r]))
 
 
@@ -16,13 +18,22 @@
 ])
 
 
-(defn cell [i]
-  [:li.b-ngun__cell {:key i :style {:background-color (select-random colors)}}])
+(defn random-color []
+  (select-random colors))
+
+(defn random-interval []
+  (nth (range 600 1000) (rand-int 400)))
+
+(defn cell [_]
+  (let [color (r/atom (random-color))]
+    (fn [idx]
+      (js/setTimeout (fn [] (swap! color random-color)) (random-interval))
+      [:li.b-ngun__cell {:style {:background-color @color}}]
+  )))
 
 (defn component []
-  [:ul.b-ngun
-    (map cell (range 72))
-  ])
+  (rlib/glue [:ul.b-ngun]
+    (rlib/nesting cell 72)))
 
 (defn colony [target]
   (r/render-component [component] target))
