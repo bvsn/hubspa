@@ -17,7 +17,11 @@
   (r/render-component [c/cv] (dom/sel1 "#js-body")))
 
 (defn apps []
-  (colony (dom/sel1 "#js-body")))
+  (r/render-component [
+    (fn [] [:canvas#js-flicker])
+  ] (dom/sel1 "#js-body"))
+
+  (colony (dom/sel1 "#js-flicker")))
 
 
 (defn componify [components]

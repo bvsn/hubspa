@@ -1,11 +1,8 @@
 (ns cljs.apps.flicker
-  (:use [cljs.lib.utils :only [select-random]])
+  (:require-macros [cljs.core.async.macros :refer [go]])
+  (:require [cljs.core.async :refer [timeout <!]]
 
-  (:require [cljs.core.async :refer [chan]]
-
-            [cljs.apps.reagent :as rlib]
-
-            [reagent.core :as r]))
+            [cljs.lib.dom :as dom]))
 
 
 (def ^:const colors [
@@ -18,22 +15,13 @@
 ])
 
 
-(defn random-color []
-  (select-random colors))
-
-(defn random-interval []
-  (nth (range 600 1000) (rand-int 400)))
-
-(defn cell [_]
-  (let [color (r/atom (random-color))]
-    (fn [idx]
-      (js/setTimeout (fn [] (swap! color random-color)) (random-interval))
-      [:li.b-ngun__cell {:style {:background-color @color}}]
-  )))
-
-(defn component []
-  (rlib/glue [:ul.b-ngun]
-    (rlib/nesting cell 72)))
+(defn cell [ctx x y]
+  (go (while true
+    (set! (.-fillStyle ctx) (rand-nth colors))
+    (.fillRect ctx x y 10 10)
+    (<! (timeout (rand-int 5000))))))
 
 (defn colony [target]
-  (r/render-component [component] target))
+  (dotimes [x 30]
+    (dotimes [y 15]
+      (cell (.getContext target "2d") (* x 10) (* y 10)))))
