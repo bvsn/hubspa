@@ -22,6 +22,8 @@
     (<! (timeout (rand-int 5000))))))
 
 (defn colony [target]
-  (dotimes [x 30]
-    (dotimes [y 15]
+  (dotimes [x 87]
+    (dotimes [y 40]
+      (set! (.-width target) 870)
+      (set! (.-height target) 400)
       (cell (.getContext target "2d") (* x 10) (* y 10)))))

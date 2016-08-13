@@ -31,16 +31,17 @@
   :ring {:handler hubspa/app}
 
   :aliases {"dev" ["with-profile" "dev" "ring" "server-headless" "8000"]
+            "prod" ["with-profile" "prod" "ring" "server-headless" "8000"]
 
             "js-prod" ["cljsbuild" "once" "prod"]
             "js-watch" ["cljsbuild" "auto" "dev"]
             "js-compile" ["cljsbuild" "once" "dev"]}
 
   :profiles {:dev {:env {:origin "http://example.com:8000"
-                         :public-path "resources/public"}}
+                         :public-path "resources"}}
 
              :prod {:env {:origin "http://hubspa.ru"
-                          :public-path "resources/public"}}}
+                          :public-path "resources"}}}
 
   :hooks [leiningen.cljsbuild]
 
