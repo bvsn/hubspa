@@ -13,6 +13,7 @@
                  [lein-cljsbuild "1.1.7"]
 
                  [mount "0.1.11"]
+                 [garden "1.3.3"]
                  [hiccup "1.0.5"]
                  [compojure "1.6.0"]
                  [org.immutant/web "2.1.10"]
@@ -20,7 +21,8 @@
                  [ring/ring-devel "1.6.3"]]
 
   :plugins [[lein-ring "0.12.3"]
-            [lein-cljsbuild "1.1.7"]]
+            [lein-cljsbuild "1.1.7"]
+            [lein-garden "0.3.0"]]
 
   :clean-targets ^{:protect false} [
     "resources/public/js"
@@ -40,6 +42,14 @@
              :uberjar {:aot :all
                        :omit-source true
                        :uberjar-name "hubspa.jar"}}
+
+  :garden {:builds
+            [{:id "site"
+              :stylesheet clj.styles.site/styles
+              :source-paths ["src"]
+              :compiler {:output-to "resources/public/css/site.css"
+                         :pretty-print? false
+                         :vendors ["webkit" "moz" "o" "ms"]}}]}
 
   :cljsbuild {:builds
               [{:id "dev"

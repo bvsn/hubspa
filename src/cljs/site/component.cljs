@@ -26,7 +26,7 @@
   [:div
     [:p "Hello, I'm Andrii Bovsunovskyi."]
 
-    [:p (str "Software developer with 8 years of experience in web-development, creating projects "
+    [:p (str "Software engineer with 8 years of experience in web-development, creating projects "
              "from scratch, team management and high load systems.")]
 
     [:p (str "I prefer to work in the small companies that create useful things. My goal is to "
@@ -35,7 +35,7 @@
 
 (defn cv []
   [:div
-    [:p (str "Like any other experienced developer, I have extensive knowledge of different "
+    [:p (str "Like any other experienced software engineer, I have extensive knowledge of different "
              "technologies and programming languages. I try to follow the principle: each problem "
              "should be solved with the specific technology and approach. Currently, I am freely "
              "with such technologies: Python, JavaScript, Clojure, ClojureScript.")]
