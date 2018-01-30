@@ -14,8 +14,8 @@
 (defroute "/cv" []
   (core/with-site core/cv))
 
-(defroute "/apps" []
-  (core/with-site core/apps))
+(defroute "*" []
+  (set! (.-location js/window) "/"))
 
 
 (secretary/dispatch! (.-hash js/location))

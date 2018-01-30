@@ -1,8 +1,8 @@
-(ns server.routing
+(ns clj.core
   (:use [compojure.core       :only [context defroutes]]
         [compojure.route      :only [not-found resources]]
-        [server.templates.404 :only [not-found-page]])
-  (:require [server.site.routing :as site]))
+        [clj.templates.404 :only [not-found-page]])
+  (:require [clj.site.routing :as site]))
 
 
 (defroutes routes

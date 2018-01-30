@@ -1,9 +1,9 @@
-(ns server.templates.layout
+(ns clj.templates.layout
   (:use [hiccup.core :only [html]]
         [hiccup.page :only [html5]]
 
-        [settings           :only [public-path]]
-        [server.lib.util.io :only [last-modified-date]])
+        [config :only [app-config]]
+        [clj.lib.util.io :only [last-modified-date]])
 
   (:require [hiccup.page :as page]
 
@@ -17,7 +17,7 @@
 
 (defn make-revision
   [file]
-  (str file "?r=" (last-modified-date (str public-path file))))
+  (str file "?v=" (last-modified-date (str (:public-path app-config) file))))
 
 (defn include-js
   [file]
@@ -32,8 +32,8 @@
   [kind body]
     `(html5
       [:head
-        [:title "Hubspa"]
-        [:meta {:name "description" :content "Andrew Bovsunovskiy"}]
+        [:title "Andrii Bovsunovskyi"]
+        [:meta {:name "description" :content "Andrii Bovsunovskyi"}]
         [:meta {:name "keywords" :content ""}]
         [:meta {:name "viewport" :content "width=device-width, initial-scale=1, maximum-scale=1"}]
         [:meta {:http-equiv "Content-Type" :content "text/html; charset=utf-8"}]

@@ -1,4 +1,4 @@
-(ns server.templates.site.index)
+(ns clj.templates.site.index)
 
 
 (def template

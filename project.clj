@@ -1,49 +1,45 @@
-(defproject hubspaclj "0.1.0"
+(defproject hubspaclj "1.0"
   :description "hubspa"
   :url "https://bvsn.github.io"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[org.clojure/clojure "1.8.0"]
-                 [org.clojure/core.async "0.2.385"]
-                 [org.clojure/clojurescript "1.9.89"]
+  :dependencies [[org.clojure/clojure "1.9.0"]
+                 [org.clojure/core.async "0.4.474"]
+                 [org.clojure/clojurescript "1.9.946"]
 
-                 [reagent "0.6.0-rc"]
-
+                 [reagent "0.8.0-alpha2"]
                  [secretary "1.2.3"]
+                 [lein-cljsbuild "1.1.7"]
 
-                 [lein-cljsbuild "1.1.3"]
-
+                 [mount "0.1.11"]
                  [hiccup "1.0.5"]
-                 [environ "1.0.3"]
-                 [http-kit "2.1.19"]
-                 [compojure "1.5.1"]]
+                 [compojure "1.6.0"]
+                 [org.immutant/web "2.1.10"]
+                 [ring/ring-core "1.6.3"]
+                 [ring/ring-devel "1.6.3"]]
 
-  :plugins [[lein-ring "0.9.7"]
-            [lein-environ "1.0.3"]
-            [lein-cljsbuild "1.1.3"]]
+  :plugins [[lein-ring "0.12.3"]
+            [lein-cljsbuild "1.1.7"]]
 
   :clean-targets ^{:protect false} [
     "resources/public/js"
     "resources/public/css"
   ]
 
-  :ring {:handler hubspa/app}
-
-  :aliases {"dev" ["with-profile" "dev" "ring" "server-headless" "8000"]
-            "prod" ["with-profile" "prod" "ring" "server-headless" "8000"]
+  :aliases {"dev" ["with-profile" "dev" "run"]
+            "deploy" ["do" "clean" ["uberjar"]]
 
             "js-prod" ["cljsbuild" "once" "prod"]
             "js-watch" ["cljsbuild" "auto" "dev"]
             "js-compile" ["cljsbuild" "once" "dev"]}
 
-  :profiles {:dev {:env {:origin "http://example.com:8000"
-                         :public-path "resources"}}
-
-             :prod {:env {:origin "http://hubspa.ru"
-                          :public-path "resources"}}}
-
   :hooks [leiningen.cljsbuild]
+
+  :profiles {;; activated automatically during uberjar
+             :uberjar {:aot :all
+                       :omit-source true
+                       :uberjar-name "hubspa.jar"}}
 
   :cljsbuild {:builds
               [{:id "dev"
@@ -65,4 +61,4 @@
                            :output-wrapper false
                            :pretty-print false}} ]}
 
-  :main hubspa)
+  :main server)

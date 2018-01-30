@@ -20,35 +20,25 @@
           [:a.b-menu__link {:href "#!/"} "About"]]
 
         [:li.b-menu__item.h-ml-20
-          [:a.b-menu__link {:href "#!/cv"} "CV"]]
-
-        [:li.b-menu__item.h-ml-20
-          [:a.b-menu__link {:href "#!/apps"} "Apps"]]]]])
+          [:a.b-menu__link {:href "#!/cv"} "CV"]]]]])
 
 (defn about []
   [:div
-    [:p "Hello, I'm Andrew Bovsunovskiy."]
+    [:p "Hello, I'm Andrii Bovsunovskyi."]
 
-    [:p (str "Software developer with 6 years of experience in web developing, "
-             "creating projects from scratch, team management, high load systems.")]
+    [:p (str "Software developer with 8 years of experience in web-development, creating projects "
+             "from scratch, team management and high load systems.")]
 
-    [:p (str "I enjoy working in small companies that create useful things. "
-             "My goal is to create software that will help to solve/optimize people's "
-             "tasks. Today I either assist such companies or create them by myself :)")]])
+    [:p (str "I prefer to work in the small companies that create useful things. My goal is to "
+             "create software that will help to solve/optimize people's tasks. Today I either "
+             "assist such companies or create them by myself :)")]])
 
 (defn cv []
   [:div
-    [:p (str "Like any other experienced developer I have extensive knowledge in "
-             "different technologies and programming languages. In my training "
-             "and self-development I try to follow the principle: 2 years for "
-             "learning one language. Currently I am freely with such technologies: "
-             "Python, JavaScript, Clojure, ClojureScript, Erlang.")]
-
-    [:p (str "Yep, I said that 2 years for one language, but had written 4 "
-             "different languages. It's all overtimes :) During the last 3 years "
-             "from time to time I do my pet projects with the Erlang. "
-             "I really like it, but I have used it only once before in my work. I hope "
-             "I will have the opportunity to work with it in any future project.")]
+    [:p (str "Like any other experienced developer, I have extensive knowledge of different "
+             "technologies and programming languages. I try to follow the principle: each problem "
+             "should be solved with the specific technology and approach. Currently, I am freely "
+             "with such technologies: Python, JavaScript, Clojure, ClojureScript.")]
 
     [:p.h-ta-c "..."]
   ])

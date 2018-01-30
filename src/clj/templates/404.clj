@@ -1,7 +1,7 @@
-(ns server.templates.404
+(ns clj.templates.404
   (:use [hiccup.page     :only [html5]]
 
-        [server.templates.layout :only [include-css]]))
+        [clj.templates.layout :only [include-css]]))
 
 
 (def not-found-page

@@ -1,4 +1,4 @@
-(ns server.lib.util.io)
+(ns clj.lib.util.io)
 
 
 (defn last-modified-date

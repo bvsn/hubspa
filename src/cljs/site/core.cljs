@@ -1,6 +1,4 @@
 (ns cljs.site.core
-  (:use [cljs.apps.flicker :only [colony]])
-
   (:require [reagent.core :as r]
 
             [cljs.lib.dom :as dom]
@@ -15,13 +13,6 @@
 
 (defn cv []
   (r/render-component [c/cv] (dom/sel1 "#js-body")))
-
-(defn apps []
-  (r/render-component [
-    (fn [] [:canvas#js-flicker])
-  ] (dom/sel1 "#js-body"))
-
-  (colony (dom/sel1 "#js-flicker")))
 
 
 (defn componify [components]
