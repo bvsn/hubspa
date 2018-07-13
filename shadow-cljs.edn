@@ -1,0 +1,28 @@
+{:source-paths ["src"]
+
+ :dependencies [[binaryage/devtools "0.9.10"]
+
+                [kibu/pushy "0.3.8"]
+                [domina "1.0.3"]
+                [secretary "1.2.3"]
+                [reagent "0.8.1"]]
+
+ :nrepl {:port 8888}
+
+ :builds {
+    :app {
+      :target :browser
+      :output-dir "public/js"
+      :asset-path "/js"
+
+      :modules {
+        :main {
+          :entries [bvsn.core]}}
+
+      :devtools {
+        :after-load bvsn.core/main
+        :http-root "public"
+        :http-port 8000
+        :preloads [
+          shadow.cljs.devtools.client.hud
+          devtools.preload]}}}}

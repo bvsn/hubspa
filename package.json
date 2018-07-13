@@ -1,0 +1,22 @@
+{
+  "name": "fex",
+  "version": "0.0.1",
+  "description": "fex.net",
+  "license": "EPL-2.0",
+  "scripts": {
+    "dev": "shadow-cljs watch app;",
+    "release": "shadow-cljs release app;",
+    "server": "shadow-cljs server;",
+    "clean": "rm -rf target; rm -rf public/js",
+    "css": "sass public/scss/site.scss:public/css/site.css --style compressed"
+  },
+  "devDependencies": {
+    "shadow-cljs": "^2.4.8"
+  },
+  "dependencies": {
+    "create-react-class": "^15.6.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "sass": "^1.9.1"
+  }
+}

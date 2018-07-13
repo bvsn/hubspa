@@ -1,6 +1,9 @@
-.lein-env
-.sass-cache
-.lein-repl-history
+yarn.lock
+package-lock.json
 
-target
-resources/public
+.shadow-cljs/
+
+target/
+public/js/
+public/css/
+node_modules/
