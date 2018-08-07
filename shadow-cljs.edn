@@ -1,13 +1,15 @@
 {:source-paths ["src"]
 
  :dependencies [[binaryage/devtools "0.9.10"]
+                [cider/cider-nrepl "0.18.0"]
 
                 [kibu/pushy "0.3.8"]
                 [domina "1.0.3"]
                 [secretary "1.2.3"]
                 [reagent "0.8.1"]]
 
- :nrepl {:port 8888}
+ :nrepl {:port 8223
+         :middleware []}
 
  :builds {
     :app {
@@ -20,7 +22,7 @@
           :entries [bvsn.core]}}
 
       :devtools {
-        :after-load bvsn.core/main
+        :after-load bvsn.core/reload
         :http-root "public"
         :http-port 8000
         :preloads [

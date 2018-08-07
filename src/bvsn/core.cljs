@@ -42,7 +42,10 @@
 
   (defroute "*" [] (set! (.-location js/window) "/")))
 
-
-(defn ^:export main []
+(defn init []
   (routes)
+  (pushy/start! history))
+
+(defn reload []
+  (pushy/stop! history)
   (pushy/start! history))

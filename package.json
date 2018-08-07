@@ -11,7 +11,7 @@
     "css": "sass public/scss/site.scss:public/css/site.css --style compressed"
   },
   "devDependencies": {
-    "shadow-cljs": "^2.4.8"
+    "shadow-cljs": "^2.4.32"
   },
   "dependencies": {
     "create-react-class": "^15.6.3",

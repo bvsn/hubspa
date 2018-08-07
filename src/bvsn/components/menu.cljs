@@ -1,7 +1,7 @@
 (ns bvsn.components.menu)
 
 (defn component []
-  [:ul.b-menu.b-menu_pos_fixed
+  [:ul.b-menu
     [:li.b-menu__item.b-bvsn
       [:a.b-menu__link.b-bvsn__logo {:href "/"} "b"]]
 
