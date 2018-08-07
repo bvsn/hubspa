@@ -1,0 +1,17 @@
+@include keyframes(rainbow) {
+  0% {
+    color: #99DE68;
+  }
+
+  30% {
+    color: #DB8B53;
+  }
+
+  70% {
+    color: #53DBCF;
+  }
+
+  100% {
+    color: #99DE68;
+  }
+}
