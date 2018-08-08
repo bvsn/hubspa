@@ -13,7 +13,10 @@
 
 (secretary/set-config! :prefix "/")
 
-(def history (pushy/pushy secretary/dispatch! (fn [x] (when (secretary/locate-route x) x))))
+(def history (pushy/pushy secretary/dispatch! (fn [url]
+  (when (secretary/locate-route url)
+        (do (swap! menu/s-current (fn [_] url))
+            url)))))
 
 
 (defn- index-page []
@@ -42,10 +45,13 @@
 
   (defroute "*" [] (set! (.-location js/window) "/")))
 
-(defn init []
+(defn start []
   (routes)
   (pushy/start! history))
 
 (defn reload []
   (pushy/stop! history)
   (pushy/start! history))
+
+(defn ^:export init []
+  (start))
