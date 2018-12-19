@@ -10,12 +10,15 @@
             [bvsn.components.menu :as menu]
             [bvsn.components.index :as index]))
 
-(secretary/set-config! :prefix "#")
+(def ^:const prefix "#")
+
+
+(secretary/set-config! :prefix prefix)
 
 
 (defn- locate
   [location]
-  (if (secretary/locate-route location)
+  (if (secretary/locate-route (clojure.string/replace location prefix ""))
       location
       "/"))
 
