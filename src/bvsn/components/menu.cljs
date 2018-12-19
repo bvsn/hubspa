@@ -1,5 +1,4 @@
-(ns bvsn.components.menu
-  (:require [reagent.core :as r]))
+(ns bvsn.components.menu)
 
 
 (def ^:const css-current-item-class "a-rainbow")
@@ -9,7 +8,7 @@
   {:href "/#/about" :title "About"}
   {:href "/#/cv" :title "CV"}])
 
-(def s-current (r/atom nil))
+(def s-current (atom nil))
 
 
 (defn- is-current-item
@@ -32,3 +31,8 @@
 
 (defn component []
   (conj [:ul.b-menu] (doall (map-indexed menu-item schema))))
+
+(defn fix-location [location]
+  (if (= location "/")
+      "/#/"
+      (str "/" location)))

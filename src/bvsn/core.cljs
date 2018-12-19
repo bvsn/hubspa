@@ -13,6 +13,19 @@
 (secretary/set-config! :prefix "#")
 
 
+(defn- locate
+  [location]
+  (if (secretary/locate-route location)
+      location
+      "/"))
+
+(defn- dispatch!
+  [location]
+  (let [route (locate location)]
+    (swap! menu/s-current (fn [_]
+      (menu/fix-location route)))
+    (secretary/dispatch! route)))
+
 (defn- index-page []
   (r/render-component [layout/index] (dom/by-id "js-root"))
 
@@ -35,20 +48,18 @@
 (defn routes []
   (defroute "/" [] (index-page))
   (defroute "/cv" [] (cv-page))
-  (defroute "/about" [] (about-page))
-
-  (defroute "*" [] (set! (.-location js/window) "/")))
+  (defroute "/about" [] (about-page)))
 
 (defn start []
   (routes)
-  (secretary/dispatch! (.-hash js/location)))
+  (dispatch! (.-hash js/location)))
 
 (defn reload []
-  (secretary/dispatch! (.-hash js/location)))
+  (dispatch! (.-hash js/location)))
 
 (defn ^:export init []
-  (.addEventListener js/window "hashchange" (fn [_]
-    (secretary/dispatch! (.-hash js/location))
-    (swap! menu/s-current (fn [_]
-      (.-hash js/location)))))
   (start))
+
+
+(.addEventListener js/window "hashchange" (fn [x]
+  (dispatch! (.-hash js/location))))
