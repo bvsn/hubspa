@@ -1,4 +1,15 @@
-(ns bvsn.components.about)
+(ns bvsn.components.about
+  (:require [reagent.core :as r]))
+
+(def ^:const python-class "b-about__python")
+(def ^:const clojure-class "b-about__clojure")
+
+(def figure-class (r/atom python-class))
+
+(defn- other-class [current]
+  (if (= current python-class)
+    clojure-class
+    python-class))
 
 (defn component []
   [:div
@@ -21,4 +32,7 @@
             "my main goal is to become a perfect manager of a whole IT department of the company "
             "with the focus on technologies and self-sufficient processes.")]]
 
-        [:figure.b-about__clj]]]])
+        [:figure {
+          :class @figure-class
+          :on-click #(swap! figure-class other-class)
+          }]]]])
