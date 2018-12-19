@@ -1,7 +1,7 @@
 {
-  "name": "fex",
+  "name": "bvsn",
   "version": "0.0.1",
-  "description": "fex.net",
+  "description": "bvsn.github.io",
   "license": "EPL-2.0",
   "scripts": {
     "dev": "shadow-cljs watch app;",
@@ -11,12 +11,12 @@
     "css": "sass public/scss/site.scss:public/css/site.css --style compressed"
   },
   "devDependencies": {
-    "shadow-cljs": "^2.4.32"
+    "shadow-cljs": "^2.7.9"
   },
   "dependencies": {
     "create-react-class": "^15.6.3",
-    "react": "^16.4.1",
-    "react-dom": "^16.4.1",
-    "sass": "^1.9.1"
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "sass": "^1.15.2"
   }
 }

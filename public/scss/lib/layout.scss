@@ -10,9 +10,9 @@ body {
     padding: 0;
     margin: 0;
     background: #FFFFFF;
-    font-family: "Roboto";
+    font-family: "Raleway", sans-serif;
     font-style: normal;
-    font-weight: normal;
+    font-weight: 400;
     color: #333333;
     font-size: 22px;
     line-height: 1.5;
@@ -43,7 +43,7 @@ a {
 h1, h2, h3, h4, h5, h6 {
     margin: 0;
     font-family: inherit;
-    font-weight: 500;
+    font-weight: 300;
     line-height: 1.1;
     color: inherit;
 }
@@ -90,6 +90,17 @@ ul {
     list-style: none;
 }
 
+ol {
+    font-size: 16px;
+    margin: 0;
+    padding: 0 0 0 30px;
+}
+
+figure {
+    margin: 0;
+    padding: 0;
+}
+
 q {
     margin: 0;
     font-style: italic;
@@ -105,5 +116,5 @@ hr {
 }
 
 p {
-    font-size: 18px;
+    font-size: 16px;
 }
