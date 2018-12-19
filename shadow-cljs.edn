@@ -3,7 +3,6 @@
  :dependencies [[binaryage/devtools "0.9.10"]
                 [cider/cider-nrepl "0.18.0"]
 
-                [kibu/pushy "0.3.8"]
                 [domina "1.0.3"]
                 [secretary "1.2.3"]
                 [reagent "0.8.1"]]

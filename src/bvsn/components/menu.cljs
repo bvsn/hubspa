@@ -5,9 +5,9 @@
 (def ^:const css-current-item-class "a-rainbow")
 
 (def schema [
-  {:href "/" :title "b" :css-class "b-bvsn__logo"}
-  {:href "/about" :title "About"}
-  {:href "/cv" :title "CV"}])
+  {:href "/#/" :title "b" :css-class "b-bvsn__logo"}
+  {:href "/#/about" :title "About"}
+  {:href "/#/cv" :title "CV"}])
 
 (def s-current (r/atom nil))
 
