@@ -9,7 +9,7 @@
             [:span.b-cv__name "Andrii Bovsunovskyi"]
             [:br]
             [:div.b-cv__contacts
-              [:span "Kiev UA ● +38(063)84-85-100"]
+              [:span "Kyiv UA ● +38(063)84-85-100"]
               [:span "an.bvsn@gmail.com"]]]
 
           [:h4.h-mt-30 "Experience"]
@@ -66,5 +66,5 @@
           [:h4.h-mt-30 "Education"]
           [:hr]
 
-          [:p (str "2007 — 2012 Taras Shevchenko National University of Kiev, Faculty of Cybernetics, "
+          [:p (str "2007 — 2012 Taras Shevchenko National University of Kyiv, Faculty of Cybernetics, "
             "Department of Theoretical Cybernetics.")]]]]])
