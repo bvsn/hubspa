@@ -1,7 +1,7 @@
 {
   "name": "bvsn",
   "version": "0.0.1",
-  "description": "bvsn.github.io",
+  "description": "bvsn.dev",
   "license": "EPL-2.0",
   "scripts": {
     "dev": "shadow-cljs watch app;",
@@ -11,12 +11,12 @@
     "css": "sass public/scss/site.scss:public/css/site.css --style compressed"
   },
   "devDependencies": {
-    "shadow-cljs": "^2.7.9"
+    "shadow-cljs": "^2.8.67"
   },
   "dependencies": {
     "create-react-class": "^15.6.3",
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "sass": "^1.15.2"
+    "react": "^16.11.0",
+    "react-dom": "^16.11.0",
+    "sass": "^1.23.1"
   }
 }

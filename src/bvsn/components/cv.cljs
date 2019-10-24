@@ -16,12 +16,28 @@
           [:hr]
 
           [:div
+           [:section.b-work-place
+              [:div.la-fx.fx-jc-sb.fx-ai-c
+                [:figure.la-fx.fx-ai-b
+                  [:img.b-work-place__logo {:src "/images/agro-online.svg"}]
+                  [:figcaption "AgroOnline"]]
+                [:p "Jan 2019 – Present"]]
+              [:p.b-work-place__position "CTO"]
+              [:p.b-work-place__text
+                (str "Responsible for most of the technological aspects of the company. I have been "
+                "fighting with the analog for the favor of digital.")]
+              [:p.b-work-place__text "Achievements:"]
+              [:ol
+                [:li "Have built a command from 2 to 12 engineers"]
+                [:li "Technological vision with the whole system design was partially implemented"]
+                [:li "Spread technology advantages through all the company departments"]]]
+
             [:section.b-work-place
               [:div.la-fx.fx-jc-sb.fx-ai-c
                 [:figure.la-fx.fx-ai-b
-                  [:img.b-work-place__fex {:src "/images/fex.png"}]
+                  [:img.b-work-place__logo {:src "/images/fex.png"}]
                   [:figcaption "FEX.NET"]]
-                [:p "Dec 2017 – Current"]]
+                [:p "Dec 2017 – Jan 2019"]]
               [:p.b-work-place__position "Head of Web Development"]
               [:p.b-work-place__text
                 (str "Responsible for communication between backend API and several other products "
@@ -36,7 +52,7 @@
             [:section.b-work-place
               [:div.la-fx.fx-jc-sb.fx-ai-c
                 [:figure.la-fx.fx-ai-b
-                  [:img.b-work-place__fex {:src "/images/orderry.png"}]
+                  [:img.b-work-place__logo {:src "/images/orderry.png"}]
                   [:figcaption "РемОнлайн"]]
                 [:p "Dec 2013 – Sep 2017"]]
               [:p.b-work-place__position "CTO, co-owner"]
@@ -50,7 +66,7 @@
             [:section.b-work-place
               [:div.la-fx.fx-jc-sb.fx-ai-c
                 [:figure.la-fx.fx-ai-b
-                  [:img.b-work-place__fex {:src "/images/evo.png"}]
+                  [:img.b-work-place__logo {:src "/images/evo.png"}]
                   [:figcaption ""]]
                 [:p "Sep 2011 – May 2013"]]
               [:p.b-work-place__position "Software Engineer"]

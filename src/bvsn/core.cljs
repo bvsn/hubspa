@@ -1,6 +1,6 @@
 (ns bvsn.core
-  (:require [domina :as dom]
-            [reagent.core :as r]
+  (:require [reagent.core :as r]
+            [goog.dom :as dom]
             [secretary.core :as secretary :include-macros true :refer-macros [defroute]]
 
             [bvsn.layout :as layout]
@@ -16,6 +16,11 @@
 (secretary/set-config! :prefix prefix)
 
 
+(defn- get-element
+  "Return the element with the passed id."
+  [id]
+  (dom/getElement (name id)))
+
 (defn- locate
   [location]
   (if (secretary/locate-route (clojure.string/replace location prefix ""))
@@ -30,22 +35,22 @@
     (secretary/dispatch! route)))
 
 (defn- index-page []
-  (r/render-component [layout/index] (dom/by-id "js-root"))
+  (r/render-component [layout/index] (get-element "js-root"))
 
-  (r/render-component [menu/component] (dom/by-id "js-menu"))
-  (r/render-component [index/component] (dom/by-id "js-body")))
+  (r/render-component [menu/component] (get-element "js-menu"))
+  (r/render-component [index/component] (get-element "js-body")))
 
 (defn- cv-page []
-  (r/render-component [layout/cv] (dom/by-id "js-root"))
+  (r/render-component [layout/cv] (get-element "js-root"))
 
-  (r/render-component [menu/component] (dom/by-id "js-menu"))
-  (r/render-component [cv/component] (dom/by-id "js-body")))
+  (r/render-component [menu/component] (get-element "js-menu"))
+  (r/render-component [cv/component] (get-element "js-body")))
 
 (defn- about-page []
-  (r/render-component [layout/about] (dom/by-id "js-root"))
+  (r/render-component [layout/about] (get-element "js-root"))
 
-  (r/render-component [menu/component] (dom/by-id "js-menu"))
-  (r/render-component [about/component] (dom/by-id "js-body")))
+  (r/render-component [menu/component] (get-element "js-menu"))
+  (r/render-component [about/component] (get-element "js-body")))
 
 
 (defn routes []
