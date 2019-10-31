@@ -18,7 +18,7 @@
         [:article.b-about
           [:h2 "A brief overview of Andrii Bovsunovskyi"]
 
-          [:p (str "Software engineer with 8 years of experience in web-development,
+          [:p (str "Software engineer with 8 years of experience in web development,
             creating projects from scratch, team management, and high load systems.")]
 
           [:p (str "I prefer to work in small companies that create useful things. My "
@@ -30,7 +30,7 @@
             "problem should be solved with the specific technology and approach. Currently, I'm "
             "fluent in the following technologies: Python, JavaScript, Clojure, ClojureScript. But "
             "my main goal is to become a perfect manager of a whole IT department of the company "
-            "with the focus on technologies and self-sufficient processes.")]]
+            "with a focus on technologies and self-sufficient processes.")]]
 
         [:figure {
           :class @figure-class
