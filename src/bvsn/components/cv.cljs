@@ -21,7 +21,7 @@
                 [:figure.la-fx.fx-ai-b
                   [:img.b-work-place__logo {:src "/images/agro-online.svg"}]
                   [:figcaption "AgroOnline"]]
-                [:p "Jan 2019 – Present"]]
+                [:p "Jan 2019 – Jan 2020"]]
               [:p.b-work-place__position "CTO"]
               [:p.b-work-place__text
                 (str "Responsible for most of the technological aspects of the company. I have been "
