@@ -18,8 +18,8 @@
         [:article.b-about
           [:h2 "A brief overview of Andrii Bovsunovskyi"]
 
-          [:p (str "Software engineer with 8 years of experience in web development,
-            creating projects from scratch, team management, and high load systems.")]
+          [:p (str "Software engineer with 10 years of experience in web development,
+            creating projects from scratch, department management, and high performance systems.")]
 
           [:p (str "I prefer to work in small companies that create useful things. My "
             "goal is to create software that will help to solve or optimize any tasks. Today I "

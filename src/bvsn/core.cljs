@@ -1,5 +1,5 @@
 (ns bvsn.core
-  (:require [reagent.core :as r]
+  (:require [reagent.dom :as rdom]
             [goog.dom :as dom]
             [secretary.core :as secretary :include-macros true :refer-macros [defroute]]
 
@@ -35,22 +35,22 @@
     (secretary/dispatch! route)))
 
 (defn- index-page []
-  (r/render-component [layout/index] (get-element "js-root"))
+  (rdom/render [layout/index] (get-element "js-root"))
 
-  (r/render-component [menu/component] (get-element "js-menu"))
-  (r/render-component [index/component] (get-element "js-body")))
+  (rdom/render [menu/component] (get-element "js-menu"))
+  (rdom/render [index/component] (get-element "js-body")))
 
 (defn- cv-page []
-  (r/render-component [layout/cv] (get-element "js-root"))
+  (rdom/render [layout/cv] (get-element "js-root"))
 
-  (r/render-component [menu/component] (get-element "js-menu"))
-  (r/render-component [cv/component] (get-element "js-body")))
+  (rdom/render [menu/component] (get-element "js-menu"))
+  (rdom/render [cv/component] (get-element "js-body")))
 
 (defn- about-page []
-  (r/render-component [layout/about] (get-element "js-root"))
+  (rdom/render [layout/about] (get-element "js-root"))
 
-  (r/render-component [menu/component] (get-element "js-menu"))
-  (r/render-component [about/component] (get-element "js-body")))
+  (rdom/render [menu/component] (get-element "js-menu"))
+  (rdom/render [about/component] (get-element "js-body")))
 
 
 (defn routes []

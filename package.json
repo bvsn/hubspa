@@ -1,7 +1,7 @@
 {
-  "name": "bvsn",
+  "name": "anbvsn",
   "version": "0.0.1",
-  "description": "bvsn.dev",
+  "description": "Andrii Bovsunovskyi CV",
   "license": "EPL-2.0",
   "scripts": {
     "dev": "shadow-cljs watch app;",
@@ -11,12 +11,11 @@
     "css": "sass public/scss/site.scss:public/css/site.css --style compressed"
   },
   "devDependencies": {
-    "shadow-cljs": "^2.8.67"
+    "shadow-cljs": "^2.11.20"
   },
   "dependencies": {
-    "create-react-class": "^15.6.3",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "sass": "^1.23.1"
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "sass": "^1.32.8"
   }
 }

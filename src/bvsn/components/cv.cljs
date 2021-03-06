@@ -16,12 +16,29 @@
           [:hr]
 
           [:div
+            [:section.b-work-place
+              [:div.la-fx.fx-jc-sb.fx-ai-c
+                [:figure.la-fx.fx-ai-b
+                  [:img.b-work-place__logo {:src "/images/orderry.png"}]
+                  [:figcaption "РемОнлайн"]]
+                [:div
+                  [:p.b-work-place__period "May 2020 – Present"]
+                  [:p.b-work-place__period "Dec 2013 – Sep 2017"]]]
+              [:p.b-work-place__position "CTO, co-owner"]
+              [:p.b-work-place__text
+                (str "I grew up from the first engineer to CTO. I’ve done all the "
+                  "job that good manager and engineer should do 😏")]
+              [:p.b-work-place__text "Achievements:"]
+              [:ol
+                [:li "I've built the project from MVP to production that has more than 6000 paid clients"]
+                [:li "The development department grew up from 0 up to 20 engineers"]]]
+
            [:section.b-work-place
               [:div.la-fx.fx-jc-sb.fx-ai-c
                 [:figure.la-fx.fx-ai-b
                   [:img.b-work-place__logo {:src "/images/agro-online.svg"}]
                   [:figcaption "AgroOnline"]]
-                [:p "Jan 2019 – Jan 2020"]]
+                [:p.b-work-place__period "Jan 2019 – Jan 2020"]]
               [:p.b-work-place__position "CTO"]
               [:p.b-work-place__text
                 (str "Responsible for most of the technological aspects of the company. I have been "
@@ -37,7 +54,7 @@
                 [:figure.la-fx.fx-ai-b
                   [:img.b-work-place__logo {:src "/images/fex.png"}]
                   [:figcaption "FEX.NET"]]
-                [:p "Dec 2017 – Jan 2019"]]
+                [:p.b-work-place__period "Dec 2017 – Jan 2019"]]
               [:p.b-work-place__position "Head of Web Development"]
               [:p.b-work-place__text
                 (str "Responsible for communication between backend API and several other products "
@@ -52,23 +69,9 @@
             [:section.b-work-place
               [:div.la-fx.fx-jc-sb.fx-ai-c
                 [:figure.la-fx.fx-ai-b
-                  [:img.b-work-place__logo {:src "/images/orderry.png"}]
-                  [:figcaption "РемОнлайн"]]
-                [:p "Dec 2013 – Sep 2017"]]
-              [:p.b-work-place__position "CTO, co-owner"]
-              [:p.b-work-place__text
-                (str "I grew up from the first engineer to CTO. Nothing more to say, I’ve done all the "
-                  "job that good manager and engineer should do 😏")]
-              [:p.b-work-place__text "Achievements:"]
-              [:ol
-                [:li "I've built the project from MVP to production that has more than 4000 paid clients."]]]
-
-            [:section.b-work-place
-              [:div.la-fx.fx-jc-sb.fx-ai-c
-                [:figure.la-fx.fx-ai-b
                   [:img.b-work-place__logo {:src "/images/evo.png"}]
                   [:figcaption ""]]
-                [:p "Sep 2011 – May 2013"]]
+                [:p.b-work-place__period "Sep 2011 – May 2013"]]
               [:p.b-work-place__position "Software Engineer"]
               [:p.b-work-place__text
                 (str "First hard engineering experience of the full stack web developer. I was involved "
