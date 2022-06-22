@@ -3,6 +3,7 @@ package-lock.json
 
 .shadow-cljs/
 .nrepl-port
+.DS_Store
 
 target/
 public/js/

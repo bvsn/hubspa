@@ -1,10 +1,10 @@
 {:source-paths ["src"]
 
- :dependencies [[binaryage/devtools "1.0.2"]
-                [cider/cider-nrepl "0.25.9"]
+ :dependencies [[binaryage/devtools "1.0.6"]
+                [cider/cider-nrepl "0.28.5"]
 
                 [secretary "1.2.3"]
-                [reagent "1.0.0"]]
+                [reagent "1.1.1"]]
 
  :nrepl {:port 8223
          :middleware []}

@@ -7,27 +7,70 @@
         [:article.b-cv
           [:div
             [:span.b-cv__name "Andrii Bovsunovskyi"]
-            [:br]
-            [:div.b-cv__contacts
-              [:span "Kyiv UA ● +38(063)84-85-100"]
-              [:span "an.bvsn@gmail.com"]]]
+            
+            [:div.la-fx.fx-ai-c.fx-jc-sb
+              [:div.b-cv__contacts
+                [:a {:href "tel:+380638485100"} "Kyiv UA 🇺🇦 +38 (063) 84-85-100"]
+                [:a {:href "https://t.me/anbvsn" :target "_blank"} "t.me/anbvsn"]
+                [:a {:href "mailto:an.bvsn@gmail.com"} "an.bvsn@gmail.com"]]
+                
+              [:figure.la-fx.fx-ai-c
+                [:img.b-cv__picture {:src "images/picture.png"}
+              ]]]]
 
-          [:h4.h-mt-30 "Experience"]
+          [:h4 "Experience"]
           [:hr]
 
           [:div
             [:section.b-work-place
               [:div.la-fx.fx-jc-sb.fx-ai-c
                 [:figure.la-fx.fx-ai-b
+                  [:img.b-work-place__logo {:src "/images/justin.png"}]
+                  [:figcaption "Justin"]]
+                [:p.b-work-place__period "Jul 2021 – Mar 2022"]]
+              [:p.b-work-place__position "CTO"]
+              [:p.b-work-place__text
+                (str "My main focus was to transform a big and slow organization into fast and maneuverable squads to "
+                  "improve commands performance and reduce time to market value. Unfortunately, the war stopped "
+                  "this process.")]
+
+              [:br]
+
+              [:p.b-work-place__text
+                (str "Technologies: Node.js, Python, PHP, C#, GCP, React, PostgreSQL")]
+              [:p.b-work-place__text
+                (str "Infrastructure: GCP, Docker, Kubernetes, GitHub Actions, GitOps, IaC")]
+
+              [:br]
+              [:p.b-work-place__text "Achievements:"]
+              [:ol
+                [:li "I've reduced cash burn by a 15% and increase teams velocity up to 50%"]
+                [:li "Roadmap for the cloud migration had been created and started"]
+                [:li (str "Created a development team with close cooperation with other non-development departments "
+                  "(CPO, Marketing, Sales, Support) to close their needs. Overall teams size - 45")]
+                [:li "Dramatically improved stability and performance of the project"]
+                [:li "Very close work with the business KPI to achieve a better company profit"]
+                [:li "The basic Data Governance transformation has been started"]]]
+
+            [:section.b-work-place
+              [:div.la-fx.fx-jc-sb.fx-ai-c
+                [:figure.la-fx.fx-ai-b
                   [:img.b-work-place__logo {:src "/images/orderry.png"}]
-                  [:figcaption "РемОнлайн"]]
+                  [:figcaption "Orderry"]]
                 [:div
-                  [:p.b-work-place__period "May 2020 – Present"]
+                  [:p.b-work-place__period "May 2020 – Jul 2021"]
                   [:p.b-work-place__period "Dec 2013 – Sep 2017"]]]
               [:p.b-work-place__position "CTO, co-owner"]
               [:p.b-work-place__text
                 (str "I grew up from the first engineer to CTO. I’ve done all the "
                   "job that good manager and engineer should do 😏")]
+              
+              [:p.b-work-place__text
+                (str "Came back to my company in the May of 2020 to boost its growth and world expansion.")
+
+                (str "A big boost had been given to the tech team. Currently, it's a completely autonomous highly "
+                  "motivated team. My job is done and I may go further.")]
+              [:br]
               [:p.b-work-place__text "Achievements:"]
               [:ol
                 [:li "I've built the project from MVP to production that has more than 6000 paid clients"]
@@ -43,6 +86,11 @@
               [:p.b-work-place__text
                 (str "Responsible for most of the technological aspects of the company. I have been "
                 "fighting with the analog for the favor of digital.")]
+              [:br]
+              [:p.b-work-place__text
+                (str "Technologies: Python 3.6, Django, PyTest, VueJS, TurfJS, WebGL, Mapbox, RabbitMQ, PostgreSQL, "
+                  "PostGIS, Celery")]
+              [:br]
               [:p.b-work-place__text "Achievements:"]
               [:ol
                 [:li "Have built a command from 2 to 12 engineers"]
@@ -60,10 +108,15 @@
                 (str "Responsible for communication between backend API and several other products "
                 "such as mobile and tv apps, infrastructure services etc. I’ve managed two teams of "
                 "backend and frontend with their own Team Leads.")]
+              [:br]
+              [:p.b-work-place__text
+                (str "Technologies: Python 3.6, Flask, PyTest, ReactJS, Go, RabbitMQ, PostgreSQL, Redis, etcd, Celery")]
+              [:br]
               [:p.b-work-place__text "Achievements:"]
               [:ol
-                [:li "Managed two teams of 14 people overall"]
-                [:li "Have completely rebuilt application from Perl to Go, Python, JS on the fly"]
+                [:li "Data storage - 10PB"]
+                [:li "Managed two teams of 20 people overall"]
+                [:li "Have completely rebuilt application from Perl to Go, Python, JS on the fly (10m MAU)"]
                 [:li "Made restructuring of the team, most of the staff were hired by me."]]]
 
             [:section.b-work-place
@@ -76,11 +129,12 @@
               [:p.b-work-place__text
                 (str "First hard engineering experience of the full stack web developer. I was involved "
                   "in all things from the low-level backend features to the UI pages.")]
+              [:br]
               [:p.b-work-place__text "Achievements:"]
               [:ol
                 [:li "Built a frontend team together with my Team Lead"]
                 [:li "Wrote tons of code that still works until nowadays"]
-                [:li "Worked in small teams on the refactoring of various parts of the platform."]]]]
+                [:li "Worked in small teams on the refactoring of various parts of the platform"]]]]
 
           [:h4.h-mt-30 "Education"]
           [:hr]

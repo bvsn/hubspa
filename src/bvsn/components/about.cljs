@@ -18,19 +18,23 @@
         [:article.b-about
           [:h2 "A brief overview of Andrii Bovsunovskyi"]
 
-          [:p (str "Software engineer with 10 years of experience in web development,
-            creating projects from scratch, department management, and high performance systems.")]
+          [:p (str "Hi there 👋")]
 
-          [:p (str "I prefer to work in small companies that create useful things. My "
-            "goal is to create software that will help to solve or optimize any tasks. Today I "
-            "either assist such companies or create them by myself.")]
+          [:p (str "I'm a Software Engineer / Manager with 11 years of experience in web development, creating projects"
+            "from scratch, department management, and high-performance systems.")]
 
-          [:p (str "Like any other experienced software engineer, I have extensive knowledge of "
-            "different technologies and programming languages. I try to follow the principle: each "
-            "problem should be solved with the specific technology and approach. Currently, I'm "
-            "fluent in the following technologies: Python, JavaScript, Clojure, ClojureScript. But "
-            "my main goal is to become a perfect manager of a whole IT department of the company "
-            "with a focus on technologies and self-sufficient processes.")]]
+          [:p (str "My goal is to create software in teams that will help to solve or optimize any tasks. Such as CRM "
+            "systems on ERP or any kind of process automatization (or simplification system). Successfully built and "
+            "led collaborative development, QA, and other departments teams to achieve high-impact results.")]
+
+          [:p (str "Like any other experienced software engineer, I have extensive knowledge of different technologies "
+            "and programming languages. I'm trying to follow the principle: each problem should be solved with a "
+            "specific technology and approach. Currently, I'm fluent in the following technologies: Python, "
+            "JavaScript, Clojure, ClojureScript. But my main goal is to improve my leadership skill and improve "
+            "company technologies to achieve leading positions in the market.")]
+            
+          [:p (str "Any goals couldn't be achieved without an experienced team and proper company culture. The "
+            "creativity of the talents should create explosive results 🏄‍♂️")]]
 
         [:figure {
           :class @figure-class
