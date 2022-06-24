@@ -20,8 +20,8 @@
 
           [:p (str "Hi there 👋")]
 
-          [:p (str "I'm a Software Engineer / Manager with 11 years of experience in web development, creating projects"
-            "from scratch, department management, and high-performance systems.")]
+          [:p (str "I'm a Software Engineer / Manager with 11 years of experience in web development, creating "
+            "projects from scratch, department management, and high-performance systems.")]
 
           [:p (str "My goal is to create software in teams that will help to solve or optimize any tasks. Such as CRM "
             "systems on ERP or any kind of process automatization (or simplification system). Successfully built and "

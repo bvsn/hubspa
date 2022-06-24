@@ -2,6 +2,7 @@ yarn.lock
 package-lock.json
 
 .shadow-cljs/
+.vscode/
 .nrepl-port
 .DS_Store
 
