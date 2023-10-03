@@ -10,13 +10,17 @@
 
             [:div.la-fx.fx-ai-c.fx-jc-sb
               [:div.b-cv__contacts
-                [:a {:href "tel:+380638485100"} "Kyiv UA 🇺🇦 +38 (063) 84-85-100"]
-                [:a {:href "https://t.me/anbvsn" :target "_blank"} "t.me/anbvsn"]
-                [:a {:href "mailto:an.bvsn@gmail.com"} "an.bvsn@gmail.com"]]
+               [:a {:href "tel:+380638485100"} "Kyiv UA 🇺🇦 +38 (063) 84-85-100"]
+               [:a.la-fx {:href "https://www.linkedin.com/in/anbvsn/" :target "_blank"}
+                [:img.h-mr-5 {:src "images/linkedin.svg" :style {"width" "16px"}}] "LinkedIn"]
+               [:a {:href "https://t.me/anbvsn" :target "_blank"}
+                [:img.h-mr-5 {:src "images/telegram.svg" :style {"width" "16px"}}] "t.me/anbvsn"]
+               [:a {:href "mailto:an.bvsn@gmail.com"}
+                [:img.h-mr-5 {:src "images/gmail.svg" :style {"width" "16px"}}] "an.bvsn@gmail.com"]]
 
               [:figure.la-fx.fx-ai-c
-                [:img.b-cv__picture {:src "images/picture.png"}
-              ]]]]
+                [:img.b-cv__picture {:src "images/picture.png"}]
+              ]]]
 
           [:h4 "Experience"]
           [:hr]
@@ -24,9 +28,10 @@
           [:div
             [:section.b-work-place
               [:div.la-fx.fx-jc-sb.fx-ai-c
-                [:figure.la-fx.fx-ai-b
+                [:a.b-work-place__link {:href "https://ordercast.io" :target "_blank"}
+                  [:figure.la-fx.fx-ai-b
                   [:img.b-work-place__logo {:src "/images/ordercast.png"}]
-                  [:figcaption "OrderCast"]]
+                  [:figcaption "OrderCast"]]]
                 [:p.b-work-place__period "Sep 2022 – Oct 2023"]]
               [:p.b-work-place__position "Head of Engineering"]
               [:p.b-work-place__text "OrderCast enables wholesalers to shift their B2B ordering process online by quickly transforming spreadsheets of product listings into an online shop."]
@@ -39,9 +44,10 @@
 
             [:section.b-work-place
               [:div.la-fx.fx-jc-sb.fx-ai-c
-                [:figure.la-fx.fx-ai-b
-                  [:img.b-work-place__logo {:src "/images/justin.png"}]
-                  [:figcaption "Justin"]]
+                [:a.b-work-place__link {:href "https://justin.ua" :target "_blank"}
+                  [:figure.la-fx.fx-ai-b
+                    [:img.b-work-place__logo {:src "/images/justin.png"}]
+                    [:figcaption "Justin"]]]
                 [:p.b-work-place__period "Jul 2021 – Mar 2022"]]
               [:p.b-work-place__position "CTO"]
               [:p.b-work-place__text
@@ -69,9 +75,10 @@
 
             [:section.b-work-place
               [:div.la-fx.fx-jc-sb.fx-ai-c
-                [:figure.la-fx.fx-ai-b
-                  [:img.b-work-place__logo {:src "/images/orderry.png"}]
-                  [:figcaption "Orderry"]]
+              [:a.b-work-place__link {:href "https://orderry.com" :target "_blank"}
+                  [:figure.la-fx.fx-ai-b
+                    [:img.b-work-place__logo {:src "/images/orderry.png"}]
+                    [:figcaption "Orderry"]]]
                 [:div
                   [:p.b-work-place__period "May 2020 – Jul 2021"]
                   [:p.b-work-place__period "Dec 2013 – Sep 2017"]]]
@@ -114,9 +121,10 @@
 
             [:section.b-work-place
               [:div.la-fx.fx-jc-sb.fx-ai-c
-                [:figure.la-fx.fx-ai-b
-                  [:img.b-work-place__logo {:src "/images/fex.png"}]
-                  [:figcaption "FEX.NET"]]
+                [:a.b-work-place__link {:href "https://fex.net" :target "_blank"}
+                  [:figure.la-fx.fx-ai-b
+                    [:img.b-work-place__logo {:src "/images/fex.png"}]
+                    [:figcaption "FEX.NET"]]]
                 [:p.b-work-place__period "Dec 2017 – Jan 2019"]]
               [:p.b-work-place__position "Head of Web Development"]
               [:p.b-work-place__text
@@ -136,9 +144,10 @@
 
             [:section.b-work-place
               [:div.la-fx.fx-jc-sb.fx-ai-c
-                [:figure.la-fx.fx-ai-b
-                  [:img.b-work-place__logo {:src "/images/evo.png"}]
-                  [:figcaption ""]]
+                [:a.b-work-place__link {:href "https://evo.company/en/" :target "_blank"}
+                  [:figure.la-fx.fx-ai-b
+                    [:img.b-work-place__logo {:src "/images/evo.png"}]
+                    [:figcaption ""]]]
                 [:p.b-work-place__period "Sep 2011 – May 2013"]]
               [:p.b-work-place__position "Software Engineer"]
               [:p.b-work-place__text
