@@ -3,6 +3,8 @@ package-lock.json
 
 .shadow-cljs/
 .vscode/
+.lsp/
+.clj-kondo/
 .nrepl-port
 .DS_Store
 

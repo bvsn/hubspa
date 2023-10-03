@@ -7,13 +7,13 @@
         [:article.b-cv
           [:div
             [:span.b-cv__name "Andrii Bovsunovskyi"]
-            
+
             [:div.la-fx.fx-ai-c.fx-jc-sb
               [:div.b-cv__contacts
                 [:a {:href "tel:+380638485100"} "Kyiv UA 🇺🇦 +38 (063) 84-85-100"]
                 [:a {:href "https://t.me/anbvsn" :target "_blank"} "t.me/anbvsn"]
                 [:a {:href "mailto:an.bvsn@gmail.com"} "an.bvsn@gmail.com"]]
-                
+
               [:figure.la-fx.fx-ai-c
                 [:img.b-cv__picture {:src "images/picture.png"}
               ]]]]
@@ -22,6 +22,21 @@
           [:hr]
 
           [:div
+            [:section.b-work-place
+              [:div.la-fx.fx-jc-sb.fx-ai-c
+                [:figure.la-fx.fx-ai-b
+                  [:img.b-work-place__logo {:src "/images/ordercast.png"}]
+                  [:figcaption "OrderCast"]]
+                [:p.b-work-place__period "Sep 2022 – Oct 2023"]]
+              [:p.b-work-place__position "Head of Engineering"]
+              [:p.b-work-place__text "OrderCast enables wholesalers to shift their B2B ordering process online by quickly transforming spreadsheets of product listings into an online shop."]
+              [:p.b-work-place__text "I'm responsible for creating a new version of a top-notch product. As always, it would be scalable, robust, and incredibly fast."]
+
+              [:br]
+
+              [:p.b-work-place__text "Technologies: Python (FastAPI, SQLModel, AsyncPG), React (React Query), PostgreSQL"]
+              [:p.b-work-place__text "Infrastructure: AWS, Docker, GitHub Actions, IaC"]]
+
             [:section.b-work-place
               [:div.la-fx.fx-jc-sb.fx-ai-c
                 [:figure.la-fx.fx-ai-b
@@ -64,7 +79,7 @@
               [:p.b-work-place__text
                 (str "I grew up from the first engineer to CTO. I’ve done all the "
                   "job that good manager and engineer should do 😏")]
-              
+
               [:p.b-work-place__text
                 (str "Came back to my company in the May of 2020 to boost its growth and world expansion.")
 
